@@ -500,17 +500,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Main Texture
-    second: {fileID: 2100000, guid: b74a640b7a280904d93735badd2d1690, type: 2}
+    second: {fileID: 2100000, guid: 5f2ddf8e91fb3f04aa3593d7e54019f6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: b2b41f43ac77c4ba6ab290cc5d77c8c6, type: 2}
+    second: {fileID: 2100000, guid: 43b88411d546cdb438de2ae7eaec159d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 25d8eafc4b2918b4881b4a1a347c7575, type: 2}
+    second: {fileID: 2100000, guid: 54b4eec6c059036449278d43fb35d996, type: 2}
   materials:
     materialImportMode: 1
     materialName: 2
