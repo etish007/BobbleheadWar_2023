@@ -1,50 +1,8 @@
 fileFormatVersion: 2
 guid: f34b166c0ef94f24ebbb46287d4c5d11
 ModelImporter:
-  serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: -8945691123924629249
-    second: Armature|Idle
-  - first:
-      74: 7910949311019472716
-    second: Armature|Sidestep-Left
-  - first:
-      74: 8931832902918582540
-    second: Armature|Sidestep-Right
-  - first:
-      74: 8349542763059015795
-    second: Armature|Walk
-  - first:
-      74: 4664529398983587316
-    second: Armature|Walk-Reverse
-  - first:
-      74: -5472273913202834826
-    second: Forearm|Idle
-  - first:
-      74: 2939200700972291177
-    second: Hand.L|Idle
-  - first:
-      74: 9113997185331267996
-    second: Forearm.001|Idle
-  - first:
-      74: 6436780646081420168
-    second: Hand.R|Idle
-  - first:
-      74: 1951294138121885667
-    second: Gun.001|Idle
-  - first:
-      74: -8912296157008169158
-    second: Neck Post|Idle
-  - first:
-      74: -3790565122231646613
-    second: Kneepad.001|Idle
-  - first:
-      74: -5489290407196288627
-    second: Calf|Idle
-  - first:
-      74: -4981579547253193638
-    second: Kneepad|Idle
+  serializedVersion: 21300
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -56,6 +14,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -85,21 +44,27 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -133,6 +98,8 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
