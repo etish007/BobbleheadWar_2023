@@ -12,6 +12,9 @@ public class Alien : MonoBehaviour
     private NavMeshAgent agent;
     public float navigationUpdate;
     private float navigationTime = 0;
+    public Rigidbody head;
+    public bool isAlive = true;
+    private DeathParticles deathParticles;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,25 +22,53 @@ public class Alien : MonoBehaviour
 
     private void Update()
     {
-        if (target != null)
+        if (isAlive)
         {
-            navigationTime += Time.deltaTime;
-            if (navigationTime > navigationUpdate)
+            if (target != null)
             {
-                agent.destination = target.position;
-                navigationTime = 0;
+                navigationTime += Time.deltaTime;
+                if (navigationTime > navigationUpdate)
+                {
+                    agent.destination = target.position;
+                    navigationTime = 0;
+                }
             }
         }
     }
     void OnTriggerEnter(Collider other)
     {
-        Die();
-        SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
+        if (isAlive)
+        {
+            Die();
+            SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
+        }
     }
     public void Die()
     {
+        isAlive = false;
+        head.GetComponent<Animator>().enabled = false;
+        head.isKinematic = false;
+        head.useGravity = true;
+        head.GetComponent<SphereCollider>().enabled = true;
+        head.gameObject.transform.parent = null;
+        head.velocity = new Vector3(0, 26.0f, 3.0f);
         OnDestroy.Invoke();
         OnDestroy.RemoveAllListeners();
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
+        head.GetComponent<SelfDestruct>().Initiate();
+        if (deathParticles)
+        {
+            deathParticles.transform.parent = null;
+            deathParticles.Activate();
+        }
         Destroy(gameObject);
+    }
+    public DeathParticles GetDeathParticles()
+    {
+        if (deathParticles == null)
+        {
+            deathParticles = GetComponentInChildren<DeathParticles>();
+        }
+        return deathParticles;
     }
 }
